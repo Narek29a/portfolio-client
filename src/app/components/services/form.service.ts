@@ -5,7 +5,7 @@ import {ProjectModel} from '../models/project.model';
 import {isEmpty} from 'rxjs/operators';
 
 @Injectable()
-export class ProjectService {
+export class FormService {
 
   constructor(private httpClient: HttpClient, private propertyService: PropertiesService) {
 
@@ -66,15 +66,20 @@ export class ProjectService {
       errors['endDateExistence'] = '';
     }
 
-    return errors == [];
 
+    for (let key in errors) {
+      if(errors[key] !== '')
+        return false;
+    }
 
+  return true;
 
   }
 
   public setProject(projectModel: ProjectModel) {
     this.propertyService.getProperty('set-project').subscribe((url: string) => {
       this.httpClient.post(url, projectModel, {responseType: 'text'}).subscribe((data: any) => {
+
       });
     });
 

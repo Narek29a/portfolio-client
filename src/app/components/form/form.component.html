@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div id="header"><h1>Contact Us!</h1></div>
+<div id="wrapper">
+
+  <div class="contact">
+    <div class="inputs">
+      First name: <input [(ngModel)]="project.contact.fName" type="text"><span>{{errors['fNameExistence']}}</span><br/>
+      Last name: <input [(ngModel)]="project.contact.lName"  type="text"><span>{{errors['lNameExistence']}}</span><br/>
+      Address: <input [(ngModel)]="project.contact.address"  type="text"><span>{{errors['addressExistence']}}</span><br/>
+      Position: <input [(ngModel)]="project.contact.position"  type="text"><span>{{errors['positionExistence']}}</span><br/>
+    </div>
+  </div>
+
+  <div class="about-projects">
+    <div class="inputs">
+      Title: <input [(ngModel)]="project.title"  type="text"><span>{{errors['titleExistence']}}</span><br>
+      Start Date: <input [(ngModel)]="project.startDate" type="date"><span>{{errors['startDateExistence']}}</span><br>
+      End Date: <input [(ngModel)]="project.endDate" type="date"><span>{{errors['endDateExistence']}}</span><br>
+      Duration: <input [(ngModel)]="project.duration" type="number"><span>{{errors['durationExistence']}}</span><br>
+      Country: <input [(ngModel)]="project.location" list="countries">
+      <datalist id="countries">
+        <option value="Ethiopia">
+        <option value="Kenya">
+        <option value="Senegal">
+        <option value="Sierra Leone">
+        <option value="Liberia">
+      </datalist>
+      <span>{{errors['locationExistence']}}</span>
+    </div>
+  </div>
+  <br><br>
+
+  <div>
+    Description: <br><textarea [(ngModel)]="project.description" rows="9" cols="70"></textarea>
+    <span>{{errors['descriptionExistence']}}</span>
+  </div>
+
+  <button class="button" (click)="setProject()">Send</button>
+
+
+</div>
+

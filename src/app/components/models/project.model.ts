@@ -1,15 +1,15 @@
 import {ContactModel} from './contact.model';
 
-export class PortfolioModel {
+export class ProjectModel {
 
   public id: number;
+  public contact: ContactModel = new ContactModel();
   public title: string;
   public description: string;
   public startDate: Date;
   public endDate: Date;
   public duration: number;
   public location: string;
-  public contact: ContactModel = new ContactModel();
 
 /*
   get id(): number {

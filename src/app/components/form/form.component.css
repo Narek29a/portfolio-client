@@ -1,0 +1,97 @@
+#header {
+  position: relative;
+  top: -10px;
+  background-color: #00A0B0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 40px;
+}
+
+h1 {
+  font-family: Lobster;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+form {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+p {
+  font-family: Verdana, Arial, sans-serif;
+  display: inline-block;
+}
+
+input {
+  font-family: Verdana, Arial, sans-serif;
+  color: #777;
+  display: inline-block;
+}
+
+textarea {
+  vertical-align: top;
+  width: 400px;
+  color: #777;
+}
+
+#wrapper {
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+  position: relative;
+  top: -10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  box-shadow: 3px 3px 3px #444;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+.inputs {
+  width: 200px;
+  clear: both;
+}
+
+.inputs input {
+  width: 100%;
+  clear: both;
+
+}
+
+textarea {
+  width: 95%;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #00A0B0;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #00808c;
+
+
+}
+
+.button:active {
+  background-color: #00A0B0;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+span {
+  color: #cc0000;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
