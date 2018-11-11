@@ -1,0 +1,11 @@
+div.links p{
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
+
+
+}
+
+div.links p:hover {
+  color: green;
+}

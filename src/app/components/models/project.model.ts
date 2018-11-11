@@ -6,6 +6,7 @@ export class ProjectModel {
   public contact: ContactModel = new ContactModel();
   public title: string;
   public description: string;
+  public projectCode: string;
   public startDate: Date;
   public endDate: Date;
   public duration: number;

@@ -2,7 +2,8 @@ import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {PropertiesService} from './properties.service';
 import {ProjectModel} from '../models/project.model';
-import {isEmpty} from 'rxjs/operators';
+import {isEmpty, mergeMap} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class FormService {
@@ -76,13 +77,10 @@ export class FormService {
 
   }
 
-  public setProject(projectModel: ProjectModel) {
-    this.propertyService.getProperty('set-project').subscribe((url: string) => {
-      this.httpClient.post(url, projectModel, {responseType: 'text'}).subscribe((data: any) => {
-
-      });
-    });
-
+  public setProject(projectModel: ProjectModel):Observable<void> {
+    return this.propertyService.getProperty('set-project').pipe(mergeMap(url => {
+      return this.httpClient.post<void>(url, projectModel);
+    }));
 
   }
 

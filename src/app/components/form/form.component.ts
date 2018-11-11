@@ -4,7 +4,7 @@ import {FormService} from '../services/form.service';
 
 
 @Component({
-  selector: 'contact-form',
+  selector: 'form-page',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 
@@ -24,7 +24,7 @@ export class FormComponent {
   public setProject() {
     if (this.formService.validateForm(this.errors, this.project)) {
 
-      this.formService.setProject(this.project);
+      this.formService.setProject(this.project).subscribe();
       alert('your project was created');
 
     }

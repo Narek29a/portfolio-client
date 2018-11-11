@@ -1,0 +1,21 @@
+
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Address</th>
+    <th>Start Date</th>
+    <th>End DAte</th>
+  </tr>
+
+  <tr *ngFor="let project of projects" class="row" (click)="viewProject(project.contact.id)">
+    <td>{{project.title}} {{project.contact.id}}</td>
+    <td>{{project.location}}</td>
+    <td>{{project.contact.address}}</td>
+    <td>{{project.startDate}}</td>
+    <td>{{project.endDate}}</td>
+  </tr>
+
+</table>
