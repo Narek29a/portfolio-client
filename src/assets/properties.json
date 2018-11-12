@@ -2,6 +2,6 @@
   "set-project": "http://localhost:8080/setProject",
   "get-projects": "http://localhost:8080/getProjects",
   "view-project": "http://localhost:8080/viewProject",
-  "edit-project": "http://localhost:8080/editProject"
-  
+  "edit-project": "http://localhost:8080/editProject",
+  "sortingByLocation":"http://localhost:8080/sortingByLocation"
 }

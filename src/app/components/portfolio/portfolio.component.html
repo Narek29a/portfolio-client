@@ -1,3 +1,14 @@
+<div class="sorting">
+
+  <select id="countries"  #location (click)="sortingByLocation(location.value)" >
+    <option value="" disabled selected>Search By Location
+    <option value="Ethiopia">Ethiopia
+    <option value="Kenya">Kenya
+    <option value="Senegal">Senegal
+    <option value="Sierra Leone">Sierra Leone
+    <option value="Liberia">Liberia
+    </select>
+</div>
 <table>
   <tr>
     <th>Title</th>
@@ -7,7 +18,8 @@
     <th>End DAte</th>
   </tr>
 
-  <tr *ngFor="let project of projects | paginate: {itemsPerPage:15, currentPage: p}" class="row" (click)="viewProject(project.contact.id)">
+  <tr *ngFor="let project of projects | paginate: {itemsPerPage:15, currentPage: p}" class="row"
+      (click)="viewProject(project.contact.id)">
     <td>{{project.title}} {{project.contact.id}}</td>
     <td>{{project.location}}</td>
     <td>{{project.contact.address}}</td>
@@ -15,5 +27,5 @@
     <td>{{project.endDate}}</td>
   </tr>
 </table>
-<pagination-controls (pageChange)="p=$event" ></pagination-controls>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
 

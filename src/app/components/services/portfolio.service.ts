@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {PropertiesService} from './properties.service';
 import {Observable} from 'rxjs';
 import {ProjectModel} from '../models/project.model';
@@ -21,7 +21,14 @@ export class PortfolioService {
       return this.http.post<Array<ProjectModel>>(url, null);
     }));
 
+  }
 
+  public sortingByLocation(location:string) {
+    let httpParams: HttpParams = new HttpParams().set('location',location);
+    return this.propertyService.getProperty('sortingByLocation').pipe(mergeMap(url =>
+    {
+      return this.http.post<Array<ProjectModel>>(url, null, {params:httpParams});
+    }));
   }
 
 
