@@ -17,6 +17,8 @@ export class PortfolioComponent implements OnInit {
 
   public projects: Array<ProjectModel> = [];
 
+
+
   constructor(private portfolioService: PortfolioService, private router: Router, private viewService: ViewService) {
 
   }
@@ -32,6 +34,9 @@ export class PortfolioComponent implements OnInit {
   public viewProject(contactId: number) {
     this.router.navigate(['/view/' +  contactId]);
   }
+
+
+
 
 }
 

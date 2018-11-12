@@ -32,9 +32,3 @@ td, th {
 }
 
 
-
-.button:active {
-  background-color: #00A0B0;
-  box-shadow: 0 3px #666;
-  transform: translateY(4px);
-}

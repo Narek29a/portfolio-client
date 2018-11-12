@@ -14,6 +14,7 @@ import {ViewComponent} from './components/view/view.component';
 import {ViewService} from './components/services/view.service';
 import {EditComponent} from './components/edit/edit.component';
 import {EditService} from './components/services/edit.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {EditService} from './components/services/edit.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    routing
+    routing,
+    NgxPaginationModule
   ],
   providers: [FormService, PropertiesService, PortfolioService, ViewService, EditService],
   bootstrap: [AppComponent]
