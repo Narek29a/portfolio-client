@@ -10,8 +10,8 @@ export class AppComponent {
 
 
 
-  constructor(private router: Router) {
-
+  constructor() {
+    console.log('asdasdasd')
   }
 
 
