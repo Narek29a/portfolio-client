@@ -14,13 +14,6 @@ export class AppComponent {
 
   }
 
-  public toFormPage() {
-    this.router.navigate(['/form-page'])
-  }
 
-
-  public toPortfolioPage() {
-    this.router.navigate(['/portfolio'])
-  }
 
 }
